@@ -32,10 +32,9 @@ module.exports = {
       },
     ]
   },
-  plugins: [HtmlWebpackPluginConfig, new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery',
-    Popper: ['popper.js', 'default'],
-  })]
+  plugins: [HtmlWebpackPluginConfig,
+    new webpack.ProvidePlugin({
+      'React': 'react'
+    })
+  ]
 }
