@@ -11,10 +11,11 @@ const Navbar = () => {
     borderBottom:'1px solid rgba(0,0,0,0.09)'
   }
 
+  var items = ["Home","Map"];
+
   return (
     <ul style={css}>
-      <NavItem text="Home"/>
-      <NavItem text="Map"/>
+      { items.map((item) => <NavItem key={item} text={item}/> )}
     </ul>
   )
 }

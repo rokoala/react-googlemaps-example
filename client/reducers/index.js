@@ -1,6 +1,6 @@
 const controlMap = (state = {}, action) => {
   switch (action.type) {
-    case 'SET_ITEM':
+    case 'SELECT_ITEM':
       return {
         id: action.id,
         text: action.text

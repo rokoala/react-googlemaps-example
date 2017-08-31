@@ -1,6 +1,6 @@
 export const setItem = (id, text) => {
   return {
-    type: 'SET_ITEM',
+    type: 'SELECT_ITEM',
     id: id,
     text: text
   }

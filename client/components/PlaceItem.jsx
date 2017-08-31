@@ -1,5 +1,7 @@
+import { setItem } from '../actions/index.js'
+import { connect } from 'react-redux'
 
-const PlaceItem = ({title, description}) =>{
+let PlaceItem = ({title, description, dispatch}) =>{
 
   let cssItem = {
     backgroundColor: 'slategrey',
@@ -7,8 +9,12 @@ const PlaceItem = ({title, description}) =>{
     borderBottom: '1px solid lightgray'
   }
 
+  let clickItem = (item,description) => {
+    dispatch(setItem(0 , item))
+  }
+
   return(
-    <li style={cssItem}>
+    <li onClick={()=>clickItem(title,description)} style={cssItem}>
       <h4>{title}</h4>
       <div>
       <p>
@@ -18,5 +24,7 @@ const PlaceItem = ({title, description}) =>{
     </li>
   )
 }
+
+PlaceItem = connect()(PlaceItem)
 
 export default PlaceItem

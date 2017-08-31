@@ -1,7 +1,5 @@
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import React from "react"
-
-// const googleMapURL = "https://maps.googleapis.com/maps/api/js?v=3.27&libraries=places,geometry&key=AIzaSyDTebYqBmNCsEP0lCmyTKfpfDwK_kErNvY"
+import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import { Component } from 'react'
 
 const GettingStartedGoogleMap = withGoogleMap(props => (
   <GoogleMap
@@ -13,7 +11,7 @@ const GettingStartedGoogleMap = withGoogleMap(props => (
   </GoogleMap>
 ));
 
-export default class Gmap extends React.Component {
+export default class Gmap extends Component {
   render() {
     return (
       <GettingStartedGoogleMap

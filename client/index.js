@@ -1,12 +1,15 @@
-import React from 'react';
 import { render } from 'react-dom'
-import App from './components/App.jsx';
-import mainStyle from './main.css';
-import mapApp from './reducers'
-import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import App from './components/App.jsx';
+import AppStore from './reducers'
+import './main.css';
 
-const store = createStore(mapApp, {});
+const store = createStore(AppStore, {});
+
+store.subscribe(()=>{
+  console.log(store.getState())
+})
 
 render(
   <Provider store={store}>
